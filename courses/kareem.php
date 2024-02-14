@@ -7,6 +7,10 @@ if($comming == "kareem"){
 
 ?>
 
+
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -42,21 +46,27 @@ tr:hover {
   <thead>
     <tr>
       <th> Program</th>
+      <th> grade</th>
       <th>Graduation Date</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>PHP</td>
-      <td>May 2023</td>
+      <td>exellent</td>
+      <td>Feb 2023</td>
     </tr>
     <tr>
       <td>Agular</td>
-      <td>December 2023</td>
+      <td>good</td>
+      <td>October 2023</td>
+
     </tr>
     <tr>
       <td>Linux</td>
-      <td>June 2024</td>
+      <td>good</td>
+      <td>jan 2024</td>
+
     </tr>
   </tbody>
 </table>

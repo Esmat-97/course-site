@@ -1,3 +1,15 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+  
+</body>
+</html>
+
 <div>
 <?php
 
@@ -6,6 +18,26 @@ $username = "root";
  $password ="";
   $dbname = "oop";
 
+                  
+  
+  if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+      $deletedUsername = $_POST['del'];
+      echo $_POST['del'];
+  
+      // Perform deletion operation based on $deletedUsername
+      // Example:
+      try {
+          $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          
+          $stmt = $conn->prepare("DELETE FROM courses WHERE link_name LIKE ?");
+          $stmt->execute(["%$deletedUsername"]);
+  
+          echo "Item deleted successfully.";
+      } catch(PDOException $e) {
+          echo "Error: " . $e->getMessage();
+      }
+  }
 
 
 
@@ -37,12 +69,8 @@ try {
                         echo "advertiser: " . $product['advertiser'] ."<br>";
                         echo "Username: " . $product['link_name'] . "<br>";
                         echo "id: " . $product['link_id'] . "<br>";
-                        echo "price: " . $product['retail_price'] . "<br>";
-                       
+                        echo "price: " . $product['retail_price'] . "<br>";                    
                     }
-    
-                     
-                   
     
                 }
     
@@ -54,8 +82,6 @@ else{
             $stmt = $conn->prepare("SELECT * FROM courses ");
             $stmt->execute();
             $products=$stmt->fetchAll(PDO::FETCH_ASSOC);
-        
-         
             if($stmt->rowCount() > 0) {
 ?>
 
@@ -81,7 +107,20 @@ else{
         <h5 class="card-title"><?php echo "advertise: " .$product['advertiser']  ?></h5>
         <div class="card-text"><?php  echo "course: " . $product['link_name']; ?></div>
         <div class="card-text"><?php  echo "price: " . $product['retail_price'] ?></div>
+
         <a href="<?php echo "url: " . $product['link'] ?>">link</a>
+        <?php
+          $comming=$_COOKIE['username'];
+          if($comming == "mohamed"){
+            ?>
+        <form  method="post">
+        <input type="hidden" name="del" value="<?php  echo $product['link_name']  ?>">
+        <button type="submit" name="submit"  class="btn btn-info">delete</button>
+        </form>
+
+        <?php
+          }
+        ?>
       </div>
 
 
@@ -89,15 +128,11 @@ else{
   </div>
   
   
-                    <?php
+              <?php
                 }
+              }
 
-                
-
-            }
-
-            
-                else {
+            else {
                     echo "اسم المستخدم أو كلمة المرور غير صحيحة";
                 } 
         }

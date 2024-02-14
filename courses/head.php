@@ -22,6 +22,27 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
+
+      <?php
+      $comming =$_COOKIE['username'];
+
+      if($comming == "mohamed"){
+
+      
+      ?>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="addproducts.php">add products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="addpersons.php">add persons</a>
+        </li>
+
+
+        <?php
+      }
+      ?>
+
         <li class="nav-item">
           <a class="nav-link" href="logout.php">logout</a>
         </li>
