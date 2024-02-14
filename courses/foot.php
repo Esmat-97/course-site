@@ -11,7 +11,7 @@
 <body>
 
 
-<footer class="bg-primary">
+<footer class="bg-body-tertiary">
     <div class="container" >
       <div class="row" >
         <div class="col-md-4" >
