@@ -92,7 +92,7 @@
     <input type="password" id="password" name="password" required>
     <button type="submit" name="submit">Login</button>
     <p><a href="#">Forgot password?</a></p>
-    <p>Or Sign Up Using</p>
+    <p>Or Sign Up  if you <a href="register.php">donot have accout</a> </p>
     <button class="social-button">f</button>
   </form>
 </div>

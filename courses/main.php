@@ -1,6 +1,8 @@
 
 <?php include 'head.php';?>
 
+<?php include 'hero.php';?>
+
 
 <html lang="en">
 <head>
@@ -111,5 +113,7 @@
 </body>
 </html>
 <?php include 'show.php';?>
+
+<?php include 'counter.php';?>
 
 <?php include 'foot.php';?>
