@@ -40,7 +40,7 @@ $username = "root";
           $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
           $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           
-          $stmt = $conn->prepare("CREATE TABLE $comming ( link_name VARCHAR(255))");
+          $stmt = $conn->prepare("CREATE TABLE $comming ( link_name VARCHAR(500))");
           $stmt->execute();
   
           echo "table created successfully."."<br>";

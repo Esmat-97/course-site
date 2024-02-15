@@ -1,31 +1,41 @@
 -- use oop;
- select * from  client;
-
+--  select * from  client;
+-- drop table courses;
 -- CREATE TABLE courses (
---     id INT AUTO_INCREMENT PRIMARY KEY,
---     advertiser VARCHAR(255),
---     category VARCHAR(255),
---     image_url VARCHAR(755),
---     link VARCHAR(255),
---     link_code TEXT,
---     link_id INT,
+--     id INT PRIMARY KEY AUTO_INCREMENT,
 --     link_name VARCHAR(255),
---     pixel_url VARCHAR(255),
---     retail_price DECIMAL(10, 2)
+--     instructor VARCHAR(255),
+--     instructor_bio TEXT,
+--     description TEXT,
+--     duration INT,
+--     year INT,
+--     retail_price DECIMAL(8, 2),
+--     advertise VARCHAR(255)
 -- );
- select * from courses;
--- delete from courses;
---  drop table  courses;
--- SET SQL_SAFE_UPDATES = 0;
---   SELECT * FROM courses WHERE advertiser LIKE "%j%";
 
--- INSERT INTO courses (advertiser, category, image_url, link, link_code, link_id, link_name, pixel_url, retail_price) VALUES
--- ('Udemy', 'Development', 'https://miro.medium.com/v2/resize:fit:1358/1*gk2oBKyk9WTXBs62vP3OUA.php', 'https://www.udemy.com/', '<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1321548&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-beginners-advanced%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1321548_ce0c.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1321548&type=2&subid=0\" >', 1321548, 'C in Depth: The Complete C Programming Guide for Beginners', 'https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1321548&type=2&subid=0', 195.0),
--- ('javatpoint', 'Development', 'https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg', 'https://www.udemy.com/', '<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.111712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0\" >', 111712, 'OOP For Beginners', 'https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0', 200.0),
--- ('Medium', 'Development', 'https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg', 'https://medium.com/', '<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.111712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0\" >', 111712, 'JavaScript Adminstration For Beginners', 'https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0', 178.0),
--- ('javatpoint', 'Development', 'https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg', 'https://www.javatpoint.com/', '<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.111712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0\" >', 111712, 'TypeScript Adminstration For Beginners', 'https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0', 244.0),
--- ('GEEKS for GEEKS', 'Development', 'https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg', 'https://www.geeksforgeeks.org/tailwind-css-display/?ref=lbp', '<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.111712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0\" >', 111712, 'Linux Adminstration For Beginners', 'https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0', 145.0),
--- ('W3schools', 'Development', 'https://udemy-images.udemy.com/course/480x270/771448_566f_5.jpg', 'https://www.w3schools.com/', '<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.771448&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fmaster-c-programming-with-visual-studio-for-all%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/771448_566f_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.771448&type=2&subid=0\" >', 771448, 'Learn and Master nodeJS Programming For Absolute Beginners!', 'https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.771448&type=2&subid=0', 200.0),
--- ('github', 'Development', 'https://udemy-images.udemy.com/course/480x270/512470_7b67_2.jpg', 'https://github.com/', '<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.512470&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-for-technical-interview%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/512470_7b67_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.512470&type=2&subid=0\" >', 512470, 'Angular Programming - Complete Tutorial For Beginners', 'https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.512470&type=2&subid=0', 95.0),
--- ('youtube', 'Developmet','https://www.google.com/imgres?imgurl=https%3A%2F%2Fopensource.google%2Fstatic%2Fimages%2Fprojects%2Fos-projects-angular.svg&tbnid=l4DdxgS1xiiJ2M&vet=12ahUKEwi8yqWEkKmEAxWadaQEHY4RAboQMygCegQIARB4..i&imgrefurl=https%3A%2F%2Fopensource.google%2Fprojects%2Fangular&docid=J34xIwxhWMBD_M&w=800&h=450&q=angular&ved=2ahUKEwi8yqWEkKmEAxWadaQEHY4RAboQMygCegQIARB4', 'https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1037214&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-beginners%2F', '<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1037214&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1037214_2ebc_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1037214&type=2&subid=0\" >', 1037214, 'PHP Programming For Beginners', 'https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1037214&type=2&subid=0', 20.0);
-
+-- INSERT INTO courses (link_name, instructor, instructor_bio, description, duration, year, retail_price, advertise) VALUES 
+-- ('Python for Beginners', 'John Smith', 'Experienced Python developer with 5+ years of industry experience', 'Learn the basics of Python programming language', 8, 2020, 49.99, 'Udemy'),
+-- ('Java Masterclass', 'Sarah Johnson', 'Senior Java developer with a passion for teaching', 'Become an expert in Java programming language', 12, 2019, 79.99, 'Coursera'),
+-- ('C++ Fundamentals', 'Michael Brown', 'Software engineer specializing in C++ development', 'Gain a solid foundation in C++ programming language', 10, 2018, 59.99, 'edX'),
+-- ('JavaScript Essentials', 'Emily Davis', 'Frontend web developer with a focus on JavaScript', 'Master the essential concepts of JavaScript programming language', 6, 2020, 39.99, 'Pluralsight'),
+-- ('Ruby on Rails', 'David Wilson', 'Full-stack developer with expertise in Ruby on Rails', 'Learn how to build web applications using Ruby on Rails framework', 9, 2017, 69.99, 'LinkedIn Learning'),
+-- ('PHP Development', 'Jennifer Lee', 'PHP developer with a passion for teaching', 'Become proficient in PHP programming language', 10, 2019, 49.99, 'Udacity'),
+-- ('R Programming', 'Robert Johnson', 'Data scientist with expertise in R programming', 'Explore the R programming language for data analysis and visualization', 8, 2018, 59.99, 'DataCamp'),
+-- ('Swift for iOS', 'Sophia Anderson', 'iOS developer with a focus on Swift programming language', 'Learn how to develop iOS apps using Swift programming language', 10, 2019, 69.99, 'Treehouse'),
+-- ('Go Programming', 'Daniel Smith', 'Software engineer with expertise in Go programming language', 'Master the Go programming language for efficient and scalable software development', 9, 2020, 59.99, 'Udemy'),
+-- ('Scala Fundamentals', 'Olivia Brown', 'Software developer with experience in Scala programming language', 'Get started with Scala programming language and functional programming', 8, 2017, 49.99, 'Pluralsight'),
+-- ('C# Basics', 'Matthew Wilson', 'Experienced C# developer with a passion for teaching', 'Learn the basics of C# programming language', 6, 2020, 39.99, 'LinkedIn Learning'),
+-- ('Perl Programming', 'Amanda Davis', 'Perl developer with a focus on web development', 'Explore the Perl programming language for scripting and web development', 10, 2019, 49.99, 'O''Reilly Media'),
+-- ('Haskell Fundamentals', 'Nathan Wilson', 'Functional programming enthusiast and Haskell developer', 'Master the Haskell programming language for elegant and concise code', 8, 2018, 59.99, 'Pluralsight'),
+-- ('Kotlin for Android', 'Isabella Thompson', 'Android developer with expertise in Kotlin programming language', 'Learn how to develop Android apps using Kotlin programming language', 10, 2020, 69.99, 'Udacity'),
+-- ('Rust Programming', 'Samuel Davis', 'Software engineer with a focus on Rust programming language', 'Get started with Rust programming language for safe and concurrent code', 9, 2017, 59.99, 'Pluralsight'),
+-- ('TypeScript Essentials', 'Victoria Johnson', 'Frontend web developer with expertise in TypeScript', 'Master the essential concepts of TypeScript programming language', 6, 2020, 39.99, 'LinkedIn Learning'),
+-- ('C Programming', 'Daniel Wilson', 'Software engineer with a focus on C programming language', 'Learn the C programming language for system and application development', 10, 2019, 49.99, 'Udemy'),
+-- ('Elixir Fundamentals', 'Sophia Brown', 'Software developer with experience in Elixir programming language', 'Get started with Elixir programming language and functional programming', 8, 2018, 59.99, 'Pluralsight'),
+-- ('C# Advanced', 'Michael Johnson', 'Experienced C# developer with a passion for teaching', 'Take your C# skills to the next level with advanced topics and techniques', 12, 2020, 79.99, 'LinkedIn Learning'),
+-- ('Lua Programming', 'Emma Wilson', 'Software engineer with a focus on Lua programming language', 'Explore the Lua programming language for game development and scripting', 9, 2017, 59.99, 'Pluralsight'),
+-- ('Racket Fundamentals', 'Oliver Davis', 'Software developer with experience in Racket programming language', 'Get started with Racket programming language and functional programming', 8, 2019, 49.99, 'edX'),
+-- ('Objective-C for iOS', 'Sophie Thompson', 'iOS developer with expertise in Objective-C programming language', 'Learn how to develop iOS apps using Objective-C programming language', 10, 2020, 69.99, 'Udemy'),
+-- ('Groovy Fundamentals', 'Olivia Johnson', 'Software engineer with experience in Groovy programming language', 'Get started with Groovy programming language for scripting and automation', 8, 2018, 49.99, 'Pluralsight'),
+-- ('Cobol Programming', 'Benjamin Davis', 'Software developer with a focus on Cobol programming language', 'Learn the Cobol programming language for mainframe and legacy system development', 12, 2019, 79.99, 'LinkedIn Learning'),
+-- ('Erlang Fundamentals', 'Oliver Smith', 'Software engineer with experience in Erlang programming language', 'Get started with Erlang programming language for concurrent and fault-tolerant systems', 8, 2017, 59.99, 'Pluralsight');

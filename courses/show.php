@@ -31,7 +31,7 @@ $username = "root";
           $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           
           $stmt = $conn->prepare("DELETE FROM courses WHERE link_name LIKE ?");
-          $stmt->execute(["%$deletedUsername"]);
+          $stmt->execute(["%$deletedUsername%"]);
   
           echo "Item deleted successfully.";
       } catch(PDOException $e) {
@@ -56,7 +56,7 @@ try {
 
                 $filter = $_POST['filter'];
                 // SQL query to select products filtered by name
-                $stmt = $conn->prepare("SELECT * FROM courses WHERE  advertiser LIKE ?");
+                $stmt = $conn->prepare("SELECT * FROM courses WHERE  advertise LIKE ?");
                 $stmt->execute(["%$filter%"]);
                 // Fetch all filtered products as an associative array
                 $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -66,7 +66,7 @@ try {
 
                     foreach ($products as $product) {
     
-                        echo "advertiser: " . $product['advertiser'] ."<br>";
+                        echo "advertiser: " . $product['advertise'] ."<br>";
                         echo "Username: " . $product['link_name'] . "<br>";
                         echo "id: " . $product['link_id'] . "<br>";
                         echo "price: " . $product['retail_price'] . "<br>";                    
@@ -104,7 +104,7 @@ else{
 
       <img src="<?php echo "title:".$product['image_url']?>" class="card-img-top">
       <div class="card-body">
-        <h5 class="card-title"><?php echo "advertise: " .$product['advertiser']  ?></h5>
+        <h5 class="card-title"><?php echo  $product['advertise']  ?></h5>
         <div class="card-text"><?php  echo "course: " . $product['link_name']; ?></div>
         <div class="card-text"><?php  echo "price: " . $product['retail_price'] ?></div>
 
@@ -126,6 +126,11 @@ else{
         <button type="submit" name="favorite"  class="btn btn-warning">addto fav</button>
         </form>
 
+
+        <form  method="post" action="more.php">
+        <input type="hidden" name="del" value="<?php  echo $product['link_name']  ?>">
+        <button type="submit" name="more"  class="btn btn-danger">more</button>
+        </form>
       </div>
 
 
