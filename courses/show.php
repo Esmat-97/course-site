@@ -117,10 +117,15 @@ else{
         <input type="hidden" name="del" value="<?php  echo $product['link_name']  ?>">
         <button type="submit" name="submit"  class="btn btn-info">delete</button>
         </form>
-
         <?php
           }
         ?>
+
+<form  method="post" action="favorite.php">
+        <input type="hidden" name="del" value="<?php  echo $product['link_name']  ?>">
+        <button type="submit" name="favorite"  class="btn btn-warning">addto fav</button>
+        </form>
+
       </div>
 
 

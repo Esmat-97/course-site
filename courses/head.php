@@ -22,6 +22,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="favorite.php">favorite</a>
+        </li>
 
       <?php
       $comming =$_COOKIE['username'];
