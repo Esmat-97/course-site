@@ -1,5 +1,6 @@
+## Project Directory Structure
 ```plaintext
-Project Directory Structure
+
 ---------------------------
 
 The following is the directory structure of the project:
