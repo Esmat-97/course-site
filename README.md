@@ -1,12 +1,6 @@
 ## Project Directory Structure
 ```plaintext
 
----------------------------
-
-The following is the directory structure of the project:
-
-
-
 ─ courses
     ├── addpersons.php
     ├── addproducts.php
